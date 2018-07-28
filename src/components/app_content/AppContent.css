@@ -1,0 +1,14 @@
+.App-content {
+  flex: 1 0 auto;
+  background-color: #328CC1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 1000px) {
+	.App-content {
+		padding: 0.5rem;
+	}
+}

@@ -1,0 +1,96 @@
+.List-box {
+  width: 920px;
+  height: 600px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.List-box table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.List-box th, td {
+  border: 1px solid black;
+}
+
+.List-box th {
+  background-color: #e6e6e6;
+  padding: 8px;
+}
+
+.List-box td {
+  white-space: wrap; 
+  overflow: auto;
+  text-overflow: clip;
+  font-size: 1rem;
+  padding: 3px;
+}
+
+.Th-id, .Td-id {
+  width: 5%;
+}
+
+.Td-id {
+  text-align: center;
+}
+
+.Th-buttons, .Td-buttons {
+  width: 10%;
+}
+
+.Th-name, .Td-name, .Th-surname, .Td-surname {
+  width: 18%;
+}
+
+.Th-address, .Td-address {
+  width: 44%;
+}
+
+.Td-name, .Td-surname, .Td-address {
+  padding-left: 10px !important;
+  padding-bottom: 0px !important;
+}
+
+.Th-gender, .Td-gender {
+  width: 5%;
+  text-align: center;
+}
+
+.Td-buttons-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.List-button {
+  width: 25px;
+  height: 23px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  padding: 0;
+  background-color: #328CC1;
+  border-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.List-button:hover {
+  background-color: #0B3C5D;
+}
+
+@media only screen and (max-width: 1000px) {
+  .List-box {
+      width: 100%;
+      height: 0px;
+      min-height: 400px;
+      overflow-y: scroll;
+      font-size: 1rem;
+    }
+
+    .List-box td {
+      font-size: 0.725rem;
+      padding: 0.1rem;
+    }
+}
