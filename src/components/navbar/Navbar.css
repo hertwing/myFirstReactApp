@@ -92,5 +92,6 @@
   .Navbar input {
     width: 70px;
     margin: 0;
+    font-size: 0.6rem;
   }
 }
