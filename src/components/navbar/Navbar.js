@@ -12,7 +12,8 @@ class Navbar extends Component {
 		this.state = {
 			searchBy: "...",
 			showAddForm: false,
-			chooseInput: 0
+			chooseInput: 0,
+			showSearchList: false
 		}
 	}
 
@@ -79,6 +80,18 @@ class Navbar extends Component {
 		}
 	};
 
+	showSearchList = () => {
+		if(this.state.showSearchList){
+			this.setState({
+				showSearchList: false
+			});
+		} else {
+			this.setState({
+				showSearchList: true
+			})
+		}
+	};
+
 	render(){
 		const items = this.props.items;
 		const listItems = _.map(item => (
@@ -96,13 +109,17 @@ class Navbar extends Component {
 				>
 					Add person
 				</div>
-				<div className="Nav-button Search-by-button">
+				<div className="Nav-button Search-by-button" onClick={this.showSearchList.bind(this)} >
 					<span>{"Search by " + this.state.searchBy}</span>
-					<div className="Nav-dropdown">
-						<ul className="Nav-list">
- 							{listItems}
- 						</ul>
- 					</div>
+					{this.state.showSearchList ? 
+						<div className="Nav-dropdown">
+							<ul className="Nav-list">
+ 								{listItems}
+ 							</ul>
+ 						</div>
+ 						:
+ 						null
+ 					}
 				</div>
 
 				{this.state.chooseInput !== 0 ?
